@@ -1,0 +1,21 @@
+# secrets: the key lives in .env, never commit it
+.env
+# data is made by the code (see data/README.md)
+data/*
+!data/README.md
+# python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+# jupyter
+.ipynb_checkpoints/
+# spark leftovers when something runs from the repo root
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+.python-version
+.vscode/
+.qoder/
