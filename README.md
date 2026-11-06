@@ -7,12 +7,12 @@ the pandas version so the two are easy to compare.
 
 - lab brief: [Data-Analysis-using-SparknPyspark.md](Data-Analysis-using-SparknPyspark.md)
 - report: [reports/final_report.md](reports/final_report.md), all tables in [reports/results.md](reports/results.md)
-- study notes: [study/](study/), open `study/index.html` in a browser
 
 ## run
 
-needs java 17 and python 3.10+. on windows also winutils.exe with HADOOP_HOME
-set (see [study/01-setup-windows.md](study/01-setup-windows.md)). `get_spark()`
+needs java 17 and python 3.10+. on windows spark also needs `winutils.exe` and `hadoop.dll` (from the
+`hadoop-3.3.6/bin` folder of github.com/cdarlint/winutils) in `%HADOOP_HOME%in`,
+with HADOOP_HOME set and `%HADOOP_HOME%in` on PATH. `get_spark()`
 also reads HADOOP_HOME from `.env` or from the value windows saved for your
 account, so a vs code / jupyter opened before you set it still works.
 
@@ -50,7 +50,6 @@ api: `src.main` and the notebook read the file. if the file is missing,
 - pyrightconfig.json - strict type check settings, vscode / pylance read it too
 - data/ - raw json lines and the cleaned parquet (not committed)
 - reports/ - final report, results.md, chart1-8.png
-- study/ - my study notes for this lab
 - analysis.ipynb - all steps incl. eda, runs top to bottom
 
 ## spark choices
